@@ -1,0 +1,9 @@
+aws_region   = "us-east-1"
+project_name = "hotel-platform"
+
+# Example only. Do not commit real secrets in terraform.tfvars.
+db_password = "replace-with-secret-from-ci-or-secret-manager"
+
+# Keep true for local plan-only review without AWS credentials.
+# Set false in real deployments to use AWS_PROFILE, environment credentials, or CI OIDC.
+use_mock_aws_credentials = true
