@@ -25,7 +25,6 @@ RDS is placed in private subnets with `publicly_accessible = false`. Its securit
 
 ```text
 devops-assessment-terraform-db/
-├── AGENTS.md
 ├── README.md
 ├── docker-compose.yml
 ├── infra/
@@ -43,12 +42,8 @@ devops-assessment-terraform-db/
 │   ├── backup.sh
 │   └── restore.sh
 ├── .github/
-│   └── workflows/
-│       └── terraform-plan.yml
-└── .agents/
-    └── skills/
-        └── devops-assessment/
-            └── SKILL.md
+    └── workflows/
+        └── terraform-plan.yml
 ```
 
 ## Prerequisites
