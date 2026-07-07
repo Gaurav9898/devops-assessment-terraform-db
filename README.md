@@ -21,6 +21,8 @@ Private RDS PostgreSQL
 
 RDS is placed in private subnets with `publicly_accessible = false`. Its security group allows PostgreSQL on port `5432` only from the ECS task security group, so database access is limited to the application tier.
 
+![Architecture](docs/architecture.png)
+
 ## Repository Structure
 
 ```text
@@ -218,6 +220,34 @@ Run the full local verification path:
 ```
 
 The script checks Terraform formatting, initializes and validates both environments, runs `terraform plan -refresh=false`, starts PostgreSQL, verifies seed data, confirms the assessment query can use the intended index, creates a backup, restores it into `hotel_db_restore`, and compares source and restored row counts.
+
+## Screenshots
+
+These generated proof images summarize the successful local checks without exposing any private assignment content.
+
+### Terraform Validation
+
+![Terraform Validation](docs/screenshots/terraform-validate.png)
+
+### Terraform Plan
+
+![Terraform Plan](docs/screenshots/terraform-plan.png)
+
+### Docker Compose Running
+
+![Docker Compose Running](docs/screenshots/docker-compose-up.png)
+
+### Database Backup
+
+![Database Backup](docs/screenshots/db-backup.png)
+
+### Database Restore
+
+![Database Restore](docs/screenshots/db-restore.png)
+
+### Query Optimization
+
+![Query Optimization](docs/screenshots/query-optimization.png)
 
 ## GitHub Actions
 
